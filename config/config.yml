@@ -40,7 +40,7 @@ ldap:
   base: "ou=Users,dc=openstack,dc=org"
 
   # User filter (e.g. "mail=george*").
-  filter: ""
+  #filter: ""
 
   # The LDAP attribute where to search for username. The default is 'uid'.
   uid: "uid"
