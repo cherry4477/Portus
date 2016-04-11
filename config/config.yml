@@ -27,17 +27,17 @@ gravatar:
 # LDAP support. If enabled, then only users of the specified LDAP server will
 # be able to use Portus.
 ldap:
-  enabled: false
+  enabled: true
 
-  hostname: "ldap_hostname"
-  port: 389
+  hostname: "54.222.156.183"
+  port: 40389
 
   # Available options: "plain", "simple_tls" and "starttls". The default is
   # "plain", the recommended is "starttls".
   method: "plain"
 
   # The base where users are located (e.g. "ou=users,dc=example,dc=com").
-  base: ""
+  base: "ou=Users,dc=openstack,dc=org"
 
   # User filter (e.g. "mail=george*").
   filter: ""
@@ -47,9 +47,9 @@ ldap:
 
   # LDAP credentials used to search for a user.
   authentication:
-    enabled: false
-    bind_dn: ""
-    password: ""
+    enabled: true
+    bind_dn: "admin@openstack.org"
+    password: "password"
 
   # Portus needs an email for each user, but there's no standard way to get
   # that from LDAP servers. You can tell Portus how to get the email from users
@@ -92,7 +92,7 @@ signup:
 
 # By default require ssl to be enabled when running on production
 check_ssl_usage:
-  enabled: true
+  enabled: false
 
 # Set the expiration time for the JWT Token that Portus uses to authenticate
 # with the registry. Note that this is just a work-around on the fact that the
